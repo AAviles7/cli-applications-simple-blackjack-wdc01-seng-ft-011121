@@ -30,12 +30,23 @@ end
 
 def initial_round
   # code #initial_round here
-  
+  c1 = deal_card
+  c2 = deal_card
+  total = c1 + c2
+  display_card_total(total)
 end
 
-def hit?
+def hit?(total)
   # code hit? here
-  
+  prompt_user
+  input = get_user_input
+  temp = 0
+  if input == 'h'
+    temp = deal_card
+  elsif (input != 'h') && (input != 's')
+    invalid_command
+  end
+  total += temp
 end
 
 def invalid_command
