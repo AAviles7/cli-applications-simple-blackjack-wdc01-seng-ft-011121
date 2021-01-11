@@ -8,7 +8,7 @@ def deal_card
   return rand(12)
 end
 
-def display_card_total(num)
+def display_card_total(card_total)
   # code #display_card_total here
   
 end
