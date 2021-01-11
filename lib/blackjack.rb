@@ -43,15 +43,17 @@ def hit?(total)
   temp = 0
   if input == 'h'
     temp = deal_card
+    total += temp
   elsif (input != 'h') && (input != 's')
     invalid_command
+    hit?
   end
-  total += temp
+  return total
 end
 
 def invalid_command
   # code invalid_command here
-  
+  puts "Please enter a valid command"
 end
 
 #####################################################
